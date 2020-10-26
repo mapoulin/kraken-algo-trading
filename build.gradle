@@ -1,0 +1,39 @@
+plugins {
+    id "application"
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+}
+
+group 'com.github.mapoulin'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation 'io.github.microutils:kotlin-logging-jvm:2.0.2'
+
+    implementation "com.netflix.archaius:archaius2-core:2.3.16"
+
+    implementation 'com.googlecode.lanterna:lanterna:3.2.0-alpha1'
+
+    implementation 'io.github.openfeign:feign-core:11.0'
+    implementation 'io.github.openfeign:feign-jaxrs2:11.0'
+    implementation 'io.github.openfeign:feign-jackson:11.0'
+    implementation 'io.github.openfeign:feign-slf4j:11.0'
+
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.11.3"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.3"
+}
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'mapoulin.trading.ApplicationKt'
+
+shadowJar {
+    archiveClassifier.set('')
+    archiveVersion.set('')
+}
