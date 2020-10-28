@@ -15,7 +15,8 @@ dependencies {
     implementation 'io.github.microutils:kotlin-logging-jvm:2.0.2'
 
     implementation "com.netflix.archaius:archaius2-core:2.3.16"
-
+    implementation 'org.joda:joda-money:1.0.1'
+    
     implementation 'com.googlecode.lanterna:lanterna:3.2.0-alpha1'
 
     implementation 'io.github.openfeign:feign-core:11.0'
